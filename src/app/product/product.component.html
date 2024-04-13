@@ -1,0 +1,25 @@
+<p>product works!</p>
+
+
+<input type="text" [(ngModel)]="priceMax"> {{priceMax}}
+<table border="2">
+    <tr>
+        <th>id</th>
+        <th>title</th>
+        <th>price</th>
+        <th>quantity</th>
+        <th>like</th>
+    </tr>
+
+    <tr *ngFor="let p of listProduct ">
+        <ng-container *ngIf="p.price<=priceMax  || priceMax==null">
+            <td>{{p.id}}</td>
+            <td>{{p.title}}</td>
+            <td>{{p.price}}</td>
+            <td>{{p.quantity}}</td>
+            <td>{{p.like}}</td>
+            <td><button (click)="increment(p.id)">like</button></td>
+            <td><button [disabled]="p.quantity==0" (click)="buy(p.id)">buy</button></td>
+        </ng-container>
+    </tr>
+</table>
