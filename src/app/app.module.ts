@@ -9,6 +9,7 @@ import { ProductComponent } from './product/product.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { DetailProudctComponent } from './detail-proudct/detail-proudct.component';
+import { ResidenceComponent } from './residence/residence.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { DetailProudctComponent } from './detail-proudct/detail-proudct.componen
     ProductComponent,
     NavbarComponent,
     NotFoundComponent,
-    DetailProudctComponent
+    DetailProudctComponent,
+    ResidenceComponent
   ],
   imports: [
     BrowserModule,
