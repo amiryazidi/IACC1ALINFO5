@@ -1,0 +1,40 @@
+<p>form works!</p>
+
+<label>Login</label>
+<input class="form-control" type="text" [formControl]="login">
+
+
+<label>Password</label>
+<input class="form-control" type="text" [formControl]="pwd">
+
+<input class="btn btn-info" type="submit" value="save" (click)="save()" [disabled]="login.invalid || pwd.invalid">
+
+
+<p>form Group!</p>
+
+
+<form class="form-group" [formGroup]="FormLogin">
+
+
+    <label>Nom</label>
+    <input class="form-control" type="text" formControlName="nom">
+
+
+    <div *ngIf="this.FormLogin.controls['nom'].touched " class="alert alert-danger ">
+        <p *ngIf="this.FormLogin.controls['nom'].hasError('required') ">Nom est obligatoire</p>
+        <p *ngIf="this.FormLogin.controls['nom'].hasError('minlength') ">Nom doit etre superieure à 3 </p>
+    </div>
+
+    <label>cin</label>
+    <input class=" form-control " type="text " formControlName="cin ">
+
+    <label>Tel</label>
+    <input class="form-control " type="text " formControlName="tel ">
+
+    <label>email</label>
+    <input class="form-control " type="text " formControlName="email ">
+
+    <input class="btn btn-info " type="submit " value="save " (click)="save() " [disabled]="FormLogin.invalid ">
+
+
+</form>
