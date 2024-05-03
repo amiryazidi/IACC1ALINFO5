@@ -7,6 +7,7 @@ import { DetailProudctComponent } from './detail-proudct/detail-proudct.componen
 import { ResidenceComponent } from './residence/residence.component';
 import { AppartementComponent } from './appartement/appartement.component';
 import { FormComponent } from './form/form.component';
+import { AddProductComponent } from './add-product/add-product.component';
 
 const routes: Routes = [
   {path : '', redirectTo: '/home', pathMatch: 'full'},
@@ -14,6 +15,7 @@ const routes: Routes = [
   {path : 'product' , component: ProductComponent},
   {path : 'residence' , component: ResidenceComponent},
   {path : 'login' , component: FormComponent},
+  {path : 'AddProduct' , component: AddProductComponent},
   {path : 'detail/:id', component: DetailProudctComponent},
   {path : 'apart/:id', component: AppartementComponent},
   {path : '**', component: NotFoundComponent}

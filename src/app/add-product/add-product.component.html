@@ -1,0 +1,31 @@
+<h1> Add Product</h1>
+
+
+<form class="form-group" [formGroup]="FormLogin">
+
+
+    <label>Id</label>
+    <input class="form-control" type="text" formControlName="id">
+
+
+    <div *ngIf="this.FormLogin.controls['id'].invalid && this.FormLogin.controls['id'].touched " class="alert alert-danger ">
+        <p *ngIf="this.FormLogin.controls['id'].hasError('required')">id est obligatoire</p>
+    </div>
+
+    <label>Title</label>
+    <input class=" form-control " type="text " formControlName="title" placeholder="aaa">
+
+    <label>Price</label>
+    <input class="form-control " type="text " formControlName="price">
+
+    <label>Quantity</label>
+    <input class="form-control " type="text " formControlName="quantity">
+
+
+    <label>Like</label>
+    <input class="form-control " type="text " formControlName="like">
+
+    <input class="btn btn-info " type="submit " value="save " (click)="save() " [disabled]="FormLogin.invalid ">
+
+
+</form>

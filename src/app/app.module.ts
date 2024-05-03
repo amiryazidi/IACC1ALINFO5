@@ -12,6 +12,7 @@ import { DetailProudctComponent } from './detail-proudct/detail-proudct.componen
 import { ResidenceComponent } from './residence/residence.component';
 import { AppartementComponent } from './appartement/appartement.component';
 import { FormComponent } from './form/form.component';
+import { AddProductComponent } from './add-product/add-product.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { FormComponent } from './form/form.component';
     DetailProudctComponent,
     ResidenceComponent,
     AppartementComponent,
-    FormComponent
+    FormComponent,
+    AddProductComponent
   ],
   imports: [
     BrowserModule,
