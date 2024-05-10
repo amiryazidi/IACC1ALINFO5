@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ProductService } from '../Services/product.service';
+import { ConsumerProductService } from '../Services/consumer-product.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-add-product',
@@ -16,8 +18,11 @@ export class AddProductComponent {
     quantity:new FormControl('',Validators.required),
     like:new FormControl('',Validators.required),
   })
-    constructor(private ps:ProductService) { }
+    constructor(private ps:ProductService, private consP:ConsumerProductService,private rt:Router) { }
   save(){
-    this.ps.AddProduct(this.FormLogin.value as any)
+    this.consP.AddProduct(this.FormLogin.value as any).subscribe(
+      ()=>this.rt.navigate(['/product']),
+    )
   }
+  //this.ps.AddProduct(this.FormLogin.value as any)
 }
