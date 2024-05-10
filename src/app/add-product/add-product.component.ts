@@ -24,5 +24,6 @@ export class AddProductComponent {
       ()=>this.rt.navigate(['/product']),
     )
   }
+  
   //this.ps.AddProduct(this.FormLogin.value as any)
 }

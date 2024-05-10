@@ -20,7 +20,10 @@
             <td>{{p.like}}</td>
             <td><button (click)="increment(p.id)">like</button></td>
             <td><button [disabled]="p.quantity==0" (click)="buy(p.id)">buy</button></td>
+            <td><button (click)="supp(p.id)">delete</button></td>
             <td><button class="btn btn-info" [routerLink]="['/detail',p.id]">Detail</button></td>
+            <td><button class="btn btn-info" [routerLink]="['/update',p.id]">Update</button></td>
+
         </ng-container>
     </tr>
 </table>

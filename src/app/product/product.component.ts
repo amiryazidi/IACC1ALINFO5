@@ -38,5 +38,11 @@ export class ProductComponent {
   buy(id:number){
     this.listProduct.find((product:Product)=>product.id==id).quantity--
 
+
+  }
+  supp(id:number){
+    this.consP.DeleteProudct(id).subscribe(
+      ()=>this.ngOnInit()
+    )
   }
 }

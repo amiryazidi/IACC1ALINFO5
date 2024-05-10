@@ -2,24 +2,10 @@
   "products": [
     {
       "id": 1,
-      "title": "json-server",
+      "title": "iphone 12",
       "price": 500,
       "quantity": 2,
       "like": 0
-    },
-    {
-      "id": "77",
-      "title": "Test22",
-      "price": "569",
-      "quantity": "12",
-      "like": "4"
-    },
-    {
-      "id": "8",
-      "title": "test",
-      "price": "500",
-      "quantity": "555",
-      "like": "5555"
     }
   ]
 }
